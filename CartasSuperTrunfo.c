@@ -9,6 +9,10 @@
     float area1, area2;
     float pib1, pib2;
     int pontos1, pontos2;
+    float densidade1, densidade2;
+    float pibpercapita1, pibpercapita2;
+
+
 
     printf("Bem-vindo ao Super Trunfo de Países! Cadastre suas cartas.\n");
     printf("Carta 1 \n"); // entrada de dados da primeira carta
@@ -37,6 +41,8 @@
     printf("Digite o número de pontos turísticos: \n");
     scanf("%d", &pontos1);
 
+    densidade1 = (populacao1 / area1);
+    pibpercapita1 = (pib1 / populacao1);
 
     printf("Carta 2 \n");
 
@@ -63,6 +69,9 @@
     printf("Digite o número de pontos turísticos: \n");
     scanf("%d", &pontos2);
 
+    densidade2 = populacao2 / area2;
+    pibpercapita2 = pib2 / populacao2;
+
    printf("Informações das cartas\n");
    printf("Carta 1:\n"); // exibição carta 1
 
@@ -73,6 +82,8 @@
    printf("Área: %.2f\n", area1);
    printf("PIB: %.2f\n", pib1);
    printf("Pontos turísticos: %d\n", pontos1);
+   printf("Densidade populacional: %.2f\n", densidade1);
+   printf("PIB per capita: %.2f\n", pibpercapita1);
 
    printf("Carta 2:\n"); // exibição carta 2
 
@@ -83,7 +94,8 @@
    printf("Área: %.2f\n", area2);
    printf("PIB: %.2f\n", pib2);
    printf("Pontos turísticos: %d\n", pontos2);
-
+   printf("Densidade populacional: %.2f\n", densidade2);
+   printf("PIB per capita: %.2f\n", pibpercapita2);
 
     return 0;
  }
