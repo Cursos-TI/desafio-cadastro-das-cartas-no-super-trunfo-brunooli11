@@ -22,6 +22,7 @@
     scanf("%s", codigo1);
 
     printf("Digite o nome da cidade: \n");
+    printf("Obs.: se o nome da cidade conter acentos, não os digite, e se houver espaços, troque-os por '_' \n");
     scanf("%s", cidade1);
 
     printf("Digite a população: \n");
