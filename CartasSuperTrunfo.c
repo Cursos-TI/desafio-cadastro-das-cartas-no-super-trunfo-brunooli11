@@ -11,7 +11,6 @@
     int pontos1, pontos2;
     float densidade1, densidade2;
     float pibpercapita1, pibpercapita2;
-    float superpoder1, superpoder2;
 
 
 
@@ -46,7 +45,6 @@
     densidade1 = (populacao1 / area1); 
     pibpercapita1 = (pib1 / populacao1);
 
-    superpoder1 = (populacao1 + area1 + pib1 + pontos1 + densidade1 + pibpercapita1);
 
     printf("Carta 2 \n\n");
 
@@ -76,7 +74,6 @@
     densidade2 = populacao2 / area2;
     pibpercapita2 = pib2 / populacao2;
 
-    superpoder2 = (populacao2 + area2 + pib2 + pontos2 + densidade2 + pibpercapita2);
 
    printf("Informações das cartas\n");
    printf("Carta 1:\n\n"); // exibição carta 1
@@ -90,7 +87,7 @@
    printf("Pontos turísticos: %d\n", pontos1);
    printf("Densidade populacional: %.2f\n", densidade1);
    printf("PIB per capita: %.2f\n", pibpercapita1);
-   printf("Superpoder: %.2f\n\n", superpoder1);
+
 
    printf("Carta 2:\n\n"); // exibição carta 2
 
@@ -102,18 +99,22 @@
    printf("PIB: %.2f\n", pib2);
    printf("Pontos turísticos: %d\n", pontos2);
    printf("Densidade populacional: %.2f\n", densidade2);
-   printf("PIB per capita: %.2f\n", pibpercapita2);
-   printf("Superpoder: %.2f\n\n", superpoder2);
+   printf("PIB per capita: %.2f\n\n", pibpercapita2);
 
 
-   printf("Comparação das cartas! 1 = carta 1, 0 = carta 2\n\n");
-   printf("População: carta %d venceu\n", (int)populacao1 > populacao2);
-   printf("Área: carta %d venceu.\n", (int)area1 > area2);
-   printf("PIB: carta %d venceu.\n", (int)pib1 > pib2);
-   printf("Pontos turísticos: carta %d venceu.\n", (int) pontos1 > pontos2);
-   printf("Densidade populacional: carta %d venceu.\n", (int)densidade1 < densidade2);
-   printf("PIB per capita: carta %d venceu.\n", (int)pibpercapita1 > pibpercapita2);
-   printf("Superpoder: carta %d venceu.\n", (int)superpoder1 > superpoder2);
+
+   printf("Comparação das cartas!\n\n");
+
+   if (populacao1 > populacao2)
+   {
+    printf("Carta 1 vence!");
+   }
+   else
+   {
+    printf("Carta 2 vence!");
+   }
+   
+
    
 
     return 0;
